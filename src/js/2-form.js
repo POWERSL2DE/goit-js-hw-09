@@ -24,7 +24,7 @@ feedbackForm.addEventListener("input", event => {
 
 feedbackForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (!email.value || !message.value) { 
+    if (!email.value.trim() || !message.value.trim()) { 
         alert("Fill all the fields");
         return;
     };
@@ -34,3 +34,4 @@ feedbackForm.addEventListener("submit", (event) => {
     console.log(initialFormData);
     initialFormData = {};
 });
+
